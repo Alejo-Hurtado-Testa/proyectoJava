@@ -1,0 +1,192 @@
+
+   
+    estiloreg.css
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Nunito', sans-serif;
+    }
+    @keyframes tilt-n-move-shaking {
+        0% { transform: translate(0, 0) rotate(0deg); }
+        25% { transform: translate(5px, 5px) rotate(5deg); }
+        50% { transform: translate(0, 0) rotate(0eg); }
+        75% { transform: translate(-5px, 5px) rotate(-5deg); }
+        100% { transform: translate(0, 0) rotate(0deg); }
+    }
+    /* width */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+      
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: rgb(23, 23, 23);
+    }
+       
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: hwb(64 9% 41%);
+    }
+      
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background:hwb(64 9% 41%);
+    }
+    body{
+        background-color: #181419;
+        color:white; 
+        
+    }
+    .bodyRegistrarse{
+        height: 10vh;
+        background:linear-gradient(to right top, #24242473,#24242473),url("../imagenes/FONDO.jpg");
+        position:sticky;
+        z-index:10;
+        top: 0;
+        .headerRegistrarse{
+            color:#ffffff;
+            height: 8vh;
+            padding:30px;
+            .anclaLogo{
+                text-decoration: none;
+                color: #ffffff;
+                font-weight: 700;
+                font-size: 1.2rem;
+                 /*animacion hover*/
+                &:hover{
+                    animation: tilt-n-move-shaking 0.25s infinite;
+                }
+            }
+        }
+        .main{
+             /*seccion de registrarse.html*/
+            .seccionRegistrarse{
+                background-color:rgba(138, 132, 76, 0.651);
+                width: 40%;
+                margin:0 auto;
+                border-radius: 5px;
+                padding: 40px 20px;
+                display: flex;
+                flex-direction:column;
+                justify-content: center;
+                align-items: center;
+                height: 70vh;
+                font-size:1.2rem;
+                .tituloRegistrarse{
+                    font-size: 2.5rem;
+                    font-weight: 700;
+                    margin-bottom: 20px;
+                }
+                /*seleccionar todos los input menos el checkbox*/
+                form{
+                    width: 100%;
+                    padding:40px;
+                    input:not(.check,.boton),select{
+                        width: 94%;
+                        margin-bottom: 10px;
+                        height: 40px;
+                        padding: 0px 20px;
+                        font-size: 1.2rem;
+                        border-radius: 20px;
+                        border: 2px solid hwb(64 9% 41%);
+                        background-color: #333333;
+                        outline: none;
+                        color:rgb(255, 255, 255);
+                    }
+                    .error input:not(.check,.boton),.error select{
+                        border: 1px solid #ff0000;
+                    }
+                    .error-text{
+                        color: #ff0000;
+                        font-size: 0.8rem;
+                        margin-top:0px;
+                        margin-bottom: 11px;
+                    }
+                  
+                    .terminos{
+                        font-size: 0.8rem;
+                        /* display: flex; */
+                        align-items: center;
+                        margin-bottom: 20px;
+                        .textoCheck{
+                            margin-left: 2px;
+                        }
+                    }
+                    .boton{
+                        width: 87%;
+                        box-sizing: content-box;
+                        background-color:hwb(64 9% 41%);
+                        border: 2px solid hwb(64 9% 41%);
+                        color: #ffffff;
+                        padding: 1rem 1rem;
+                        border-radius: 5px;
+                        font-size: 1rem;
+                        font-weight: 500;
+                       
+                    }
+                    .ayuda{
+                        margin-top:40px;
+                        font-size: 1rem;
+                        text-decoration: none;
+                        color: #787878;
+                        font-weight:400;
+                       
+                    }
+                }
+               
+            }
+       
+        }
+    }
+    
+    
+    
+    /*media querys para mobile PAGINA registrarse*/
+    @media (max-width: 1200px) {
+        .bodyRegistrarse{
+            .headerRegistrarse{
+                padding:20px;
+                .anclaLogo{
+                    font-size: 1rem;
+                }
+            }
+            .main{
+                .seccionRegistrarse{
+                    width: 95%;
+                    padding: 10px 10px;
+                    .tituloRegistrarse{
+                        font-size: 2rem;
+                    }
+                   form{
+                    width: 100%;
+                    text-align: center;
+                   
+                    input:not(.check,.boton),select{
+                        width: 80%;
+                        height: 35px;
+                        font-size: 1rem;
+                    }
+                    .terminos{
+                        width: 80%;
+                        margin:0 auto;
+                        font-size: 0.7rem;
+                    }
+                    .boton{
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                        width: 70%;
+                        padding: 0.8rem 0.8rem;
+                        font-size: 0.8rem;
+                    }
+                    .ayuda{
+                        text-align: left;
+                        font-size: 0.8rem;
+                    }
+                   }
+                   
+                }
+            }
+        }
+    
+    }
